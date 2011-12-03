@@ -1,0 +1,1 @@
+My code is embeded in the siriproxy-example.rb file at the moment.  Now I'm working on pulling it out into it's own gem for config.yml support.  Stay Tuned.
