@@ -1,1 +1,25 @@
 My code is embeded in the siriproxy-example.rb file at the moment.  Now I'm working on pulling it out into it's own gem for config.yml support.  Stay Tuned.
+
+
+Installation:
+
+Assumption - You already have SiriProxy installed and functioning properly.  See instruction at: https://github.com/plamoni/SiriProxy
+
+1) copy app_controller.rb to ~siriproxy_root/lib/
+
+2) Save original siriproxy-example.rb to something like siriproxy-example-orig.rb
+
+3) copy siriproxy-example.rb to ~siriproxy_root/plugins/siriproxy-example/lib/
+
+Supported apps:
+	iTunes
+	Plex
+	iCamSource
+
+Supported Voice Commands:
+	"Start <appname>"
+	"Stop <appname>"
+	"Status of <appname>"
+
+iTunes and Plex can be called by name.  iCamSource's voice command is "webcam" instead of "icamsource" as it just makes more sense to call it a webcam.  
+
