@@ -12,9 +12,14 @@ require 'app_controller'
 
 class SiriProxy::Plugin::Example < SiriProxy::Plugin
   def initialize(config)
-     @app_ctl = AppController.new()
+     @app_ctl = AppController.new() #app_controller "brain" reference
   end
+###
+# Start of app_controller siri code
+###
+###
 # Spoken name to real application name translation
+###
   def spoketoreal(spoken)
     case
      when (spoken =~ /i[Tt]unes/)
@@ -29,12 +34,6 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     return realapp
   end
 
-
-  listen_for /test siri proxy/i do
-    say "Siri Proxy is up and running right now!" #say something to the user!
-    
-    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
-  end
 ## App Controller high level
   listen_for /applications .* control/i do
      say "I can start, stop and give you status on itunes, plex and your webcam"
@@ -98,7 +97,14 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     end
     request_completed
    end
-  
+###
+# End of app_controller code
+### 
+  listen_for /test siri proxy/i do
+    say "Siri Proxy is up and running right now!" #say something to the user!
+    
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
   #Demonstrate that you can have Siri say one thing and write another"!
   listen_for /you don't say/i do
     say "Sometimes I don't write what I say", spoken: "Sometimes I don't say what I write"

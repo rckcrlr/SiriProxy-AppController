@@ -1,6 +1,6 @@
 class AppController
    def initialize()
-	# Put init stuff here.
+	# Put init stuff here. Nothing needed at this stage
    end
 
    def appstatus?(app)
