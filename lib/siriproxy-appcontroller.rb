@@ -4,9 +4,9 @@ require 'app_controller'
 
 
 class SiriProxy::Plugin::AppController < SiriProxy::Plugin
-  def initialize(*params)
+  def initialize(config)
+     @app_ctl = AppBrain.new()
   end
-  @app_ctl = AppController.new()
 # Spoken name to real application name translation
   def spoketoreal(spoken)
     case

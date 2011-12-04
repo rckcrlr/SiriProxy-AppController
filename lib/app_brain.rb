@@ -1,4 +1,4 @@
-class AppController
+class AppBrain
    def initialize(*params)
 	# Put init stuff here.
    end
