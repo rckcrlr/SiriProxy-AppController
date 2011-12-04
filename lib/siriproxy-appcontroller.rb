@@ -1,6 +1,6 @@
 require 'cora'
 require 'siri_objects'
-require 'app_controller'
+require 'app_brain'
 
 
 class SiriProxy::Plugin::AppController < SiriProxy::Plugin
