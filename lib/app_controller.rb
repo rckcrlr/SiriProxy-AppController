@@ -1,5 +1,5 @@
 class AppController
-   def initialize(config)
+   def initialize(*params)
 	# Put init stuff here.
    end
 
