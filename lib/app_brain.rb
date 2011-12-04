@@ -1,5 +1,5 @@
 class AppBrain
-   def initialize(*params)
+   def initialize()
 	# Put init stuff here.
    end
 
