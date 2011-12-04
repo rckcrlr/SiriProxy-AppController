@@ -1,0 +1,9 @@
+#Example configuration options that can be placed in your main SiriProxy config.yml
+
+##########################
+#NOTICE: Modifying these options in this file has no effect. You must put them in SiriProxy's config.yml! Then run ./bin/siriproxy bundle from the top level directory of SiriProxy
+##########################
+
+    - name: 'AppController'
+      git: 'git://github.com/rckcrlr/SiriProxy-AppController.git'
+
