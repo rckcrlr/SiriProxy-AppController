@@ -16,7 +16,7 @@
 
 <h1>Installation</h1>
 
-<p>1) Install siriproxy using the instructions here:</p>
+<p>1) Install siriproxy using the instructions here: https://github.com/plamoni/SiriProxy</p>
 
 <p>2) Add AppConroller confi lines from config-info.yml to your siriproxy config.yml file</p>
 
