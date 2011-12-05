@@ -12,7 +12,7 @@ class SiriProxy::Plugin::AppController < SiriProxy::Plugin
     case
      when (spoken =~ /i[Tt]unes/)
        realapp = "iTunes"
-     when (spoken =~ /[Pp]lex/)
+     when (spoken =~ /[Mm]edia/)
        realapp = "Plex"
      when (spoken =~ /[Ww]eb[Cc]am/)
        realapp = "iCamSource"
@@ -24,7 +24,7 @@ class SiriProxy::Plugin::AppController < SiriProxy::Plugin
 
 ## App Controller high level
   listen_for /applications .* control/i do
-     say "I can start, stop and give you status on itunes, plex and your webcam"
+     say "I can start, shutdown and give you status on itunes, plex and your webcam"
      request_completed
   end
 
@@ -65,10 +65,10 @@ class SiriProxy::Plugin::AppController < SiriProxy::Plugin
     request_completed
   end
 
-  listen_for /stop (.*)/i do |spokenapp|
+  listen_for /shutdown (.*)/i do |spokenapp|
     app = spoketoreal(spokenapp)
     if (app == "unknown")
-       say "I'm sorry, I don't know how to stop #{spokenapp}."
+       say "I'm sorry, I don't know how to shutdown #{spokenapp}."
     else
        if (@app_ctl.appstatus?(app))
           @app_ctl.stopapp?(app)
@@ -77,7 +77,7 @@ class SiriProxy::Plugin::AppController < SiriProxy::Plugin
             say "#{spokenapp} has been stopped"
             request_completed
           else
-            say "I'm sorry, I was not able to stop #{spokenapp}"
+            say "I'm sorry, I was not able to shutdown #{spokenapp}"
           end
        else
           say "#{spokenapp} is not running"
