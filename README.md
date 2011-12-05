@@ -8,9 +8,9 @@
 
 <p>Spoken commands are:</p>
 
-<p>"Start <app>"
-"Shutdown <app>"
-"Status of <app>"</p>
+<p>Start "app"
+Shutdown "app"
+Status of "app"</p>
 
 <p>Siri knows Plex as "media" and iCamSource as "WebCam".  This was done as Siri has a problem understanding the word Plex and icamsource.  </p>
 
@@ -18,9 +18,9 @@
 
 <p>1) Install siriproxy using the instructions here: https://github.com/plamoni/SiriProxy</p>
 
-<p>2) Add AppConroller confi lines from config-info.yml to your siriproxy config.yml file</p>
+<p>2) Add AppConroller config lines from config-info.yml to your siriproxy config.yml file</p>
 
-<p>3) From the top level of your siriproxy installation run './bin/siriproxy bunle'</p>
+<p>3) From the top level of your siriproxy installation run './bin/siriproxy bundle'</p>
 
 <p>To add apps or change the word that Siri uses for an app you can edit the 'case' statement at the top of siriproxy-appcontroller.rb.</p>
 
