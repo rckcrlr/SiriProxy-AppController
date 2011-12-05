@@ -65,7 +65,7 @@ class SiriProxy::Plugin::AppController < SiriProxy::Plugin
     request_completed
   end
 
-  listen_for /shutdown (.*)/i do |spokenapp|
+  listen_for /(shutdown|shut down) (.*)/i do |garb, spokenapp|
     app = spoketoreal(spokenapp)
     if (app == "unknown")
        say "I'm sorry, I don't know how to shutdown #{spokenapp}."
